@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+	
+
+.myTitle{
+	font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #303441;
+}
+
+.myBox{
+	background: #fff;
+    border: 1px solid #e6e6e6;
+    margin-top: 15px;
+}
+
+.myContent{
+	height: auto;
+    justify-content: inherit;
+    align-items: center;
+}
+
+.rows{
+	display: flex;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+/* col */
+.middle{
+	width: 440px;
+    line-height: 25px;
+    padding: 33px;
+}
+
+.post_writer,  prch_date{
+	font-size: 13px;
+}
+
+.end{
+	width: 30%;
+	padding: 72px;
+}
+
+.post_img{
+	width: 200px;
+	height: 160px;
+	border-radius: 4px;
+	margin: 17px;
+	margin-right: 0px;
+}
+
+.my_btn{
+    border-radius: 6px;
+    width: 120px;
+    height: 50px;
+    background-color: rgb(204, 232, 226);
+    border-style: none;
+    font-weight: 500;
+    font-size: 18px; 
+    line-height: 50px;
+    
+}
+
+.next{
+	margin-top: 100px;
+}
+
+
+span:hover {
+	background-color: rgb(204, 232, 226);
+	color: rgb(116, 197, 192);
+	}
+	
+.btn-box:hover {
+    background-color: rgb(189, 244, 236);
+    font-weight: 900;
+    color: black;
+}

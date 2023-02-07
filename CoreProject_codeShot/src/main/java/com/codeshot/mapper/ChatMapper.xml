@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.codeshot.mapper.ChatMapper">
+	<select id="showChatRoom" parameterType="String" resultType="ChatRoomDTO">
+		select * from tbl_chatroom where seller_email=#{email} or buyer_email=#{email}
+	</select>
+	<select id="showChatting" parameterType="int" resultType="ChattingDTO">
+		select * from tbl_chatting where room_num=#{roomNum} order by chat_time
+	</select>
+	<select id="getChattingTitle" parameterType="String" resultType="String">
+		select room_title from tbl_chatroom
+		where room_num=#{roomNum}
+	</select>
+	<insert id="inputChat" parameterType="ChattingDTO">
+		insert into tbl_chatting values(tbl_chatting_seq.nextval,#{talker},#{chat_content},sysdate,#{room_num})
+	</insert>
+	<insert id="createChatRoom" parameterType="ChatRoomDTO">
+		insert into tbl_chatroom values(tbl_chatroom_seq.nextval,#{seller_email},#{buyer_email},#{room_title},#{room_description},sysdate)
+	</insert>
+	<select id="getSellerInfo" parameterType="String" resultType="UserDTO">
+		select * from tbl_user where mem_email=#{sellerEmail}
+	</select>
+</mapper>

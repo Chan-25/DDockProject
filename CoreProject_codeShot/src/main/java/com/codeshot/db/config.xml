@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="com/codeshot/db/db.properties"></properties>
+	<typeAliases>
+		<typeAlias type="com.codeshot.model.UserDTO" alias="UserDTO"/>
+		<typeAlias type="com.codeshot.model.PostDTO" alias="PostDTO"/>
+		<typeAlias type="com.codeshot.model.ChatRoomDTO" alias="ChatRoomDTO"/>
+		<typeAlias type="com.codeshot.model.ChattingDTO" alias="ChattingDTO"/>
+		<typeAlias type="com.codeshot.model.WishListDTO" alias="WishListDTO"/>
+		<typeAlias type="com.codeshot.model.ReviewDTO" alias="ReviewDTO"/>
+		<typeAlias type="com.codeshot.model.PortfolioDTO" alias="PortfolioDTO"/>
+		<typeAlias type="com.codeshot.model.PrchsDTO" alias="PrchsDTO"/>
+	</typeAliases>
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+  	<mapper resource="com/codeshot/mapper/UserMapper.xml"/>
+  	<mapper resource="com/codeshot/mapper/PostMapper.xml"/>
+  	<mapper resource="com/codeshot/mapper/ChatMapper.xml"/>
+  	<mapper resource="com/codeshot/mapper/WishListMapper.xml"/>
+  	<mapper resource="com/codeshot/mapper/ReviewMapper.xml"/>
+  	<mapper resource="com/codeshot/mapper/PortfolioMapper.xml"/>
+    <mapper resource="com/codeshot/mapper/PrchsMapper.xml"/>
+  </mappers>
+</configuration>
